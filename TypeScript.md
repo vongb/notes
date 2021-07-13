@@ -69,3 +69,32 @@ console.log(_);
 console.log(rest);
 // [4,5,6]
 ```
+
+---
+## Renaming is weird `as`
+When destructuring, we use the colon:
+``` typescript
+const person = {
+  firstName: 'Vong'
+  lastName: 'Beng'
+}
+
+const {lastName: surname} = person;
+```
+
+When importing, we use `as`:
+``` typescript
+import { exportModule as newNameForModule } from './file';
+```
+
+---
+
+## `as` is also a Typescript way of asserting types
+```typescript
+const a = 'this is a string';
+const b = a as string;
+
+// below is the same as the above but potentially confused when written near React code
+const a = ' this is a string';
+const b = <string> a;
+```
