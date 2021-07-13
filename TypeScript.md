@@ -72,7 +72,7 @@ console.log(rest);
 
 ---
 ## Renaming is weird `as`
-When destructuring, we use the colon:
+When destructuring, we use a colon:
 ``` typescript
 const person = {
   firstName: 'Vong'
