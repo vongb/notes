@@ -2,20 +2,61 @@
 
 https://www.hostinger.com/tutorials/linux-commands
 
-## `pwd`
+- [35 Useful Linux Commands](#35-useful-linux-commands)
+  - [Displaying info](#displaying-info)
+    - [`pwd`](#pwd)
+    - [`ls`](#ls)
+    - [`cat` (List or joins file content)](#cat-list-or-joins-file-content)
+    - [`head` (Text file)](#head-text-file)
+    - [`tail` (Text file)](#tail-text-file)
+    - [`diff` (Text file)](#diff-text-file)
+  - [Navigating](#navigating)
+    - [`cd`](#cd)
+  - [Creating](#creating)
+    - [`mkdir` (New directory)](#mkdir-new-directory)
+    - [`touch` (New file)](#touch-new-file)
+    - [`echo` (Write data to file)](#echo-write-data-to-file)
+  - [Moving Files](#moving-files)
+    - [`cp`](#cp)
+    - [`mv` (Move and rename files)](#mv-move-and-rename-files)
+  - [Deleting](#deleting)
+    - [`rmdir` (Empty directories only)](#rmdir-empty-directories-only)
+    - [`rm` (Files and directories)](#rm-files-and-directories)
+  - [Searching](#searching)
+    - [`locate` (Files only)](#locate-files-only)
+    - [`find` (Files or directories inside specific directories)](#find-files-or-directories-inside-specific-directories)
+    - [`grep` (Search text file)](#grep-search-text-file)
+  - [Permissions](#permissions)
+    - [`sudo`](#sudo)
+    - [`chmod` (Change permissions)](#chmod-change-permissions)
+    - [`chown` (Change owner)](#chown-change-owner)
+  - [Archiving](#archiving)
+    - [`tar` (Optional compress)](#tar-optional-compress)
+    - [`zip` and `unzip`](#zip-and-unzip)
+  - [Processes](#processes)
+    - [`jobs`](#jobs)
+    - [`kill`](#kill)
+    - [`top` (Task Manager)](#top-task-manager)
+  - [Networking](#networking)
+    - [`ping`](#ping)
+    - [`wget` (Download - webget)](#wget-download---webget)
+    - [`hostname`](#hostname)
+  - [System](#system)
+    - [`uname`](#uname)
+    - [`history`](#history)
+    - [`man` (Manual)](#man-manual)
+    - [`df` (Show how much space available)](#df-show-how-much-space-available)
+    - [`du` (disk usage for directories)](#du-disk-usage-for-directories)
+    - [`useradd` and `userdel`](#useradd-and-userdel)
+- [Questions](#questions)
+
+## Displaying info
+
+### `pwd`
 
 Prints the working directory
 
-## `cd`
-
-Change directory.
-
-Useful shortcuts:
-
-- `cd` go to home folder
-- `cd-` go to previous directory
-
-## `ls`
+### `ls`
 
 List content of _**directory**_
 
@@ -23,7 +64,7 @@ List content of _**directory**_
 - `-a` will show hidden files
 - `-al` will list files and directories with detailed information like permissions, size, owner, etc.
 
-## `cat`
+### `cat` (List or joins file content)
 
 List content of a **_file_**.
 
@@ -33,23 +74,36 @@ Other ways to use `cat`:
 - `cat filename1 filename2>filename3` joins files 1 and 2 and stores the output of them in a new file 3.
 - `cat filename | tr a-z A-Z >output.txt` convert file to upper or lower case
 
-## `cp`
+### `head` (Text file)
 
-Copy files from current directory to different directory.
+Shows the first 10 lines of a text file.
 
-- `cp scenery.jpg /home/username/Pictures` would make a copy of `scenery.jpg` from your directory in the Pictures directory
+`head -n 5 filename` to show 5 lines.
 
-## `mv`
+### `tail` (Text file)
 
-Move files.
+Shows last lines of a text file.
 
-- `mv file.txt /home/username/Documents`
+### `diff` (Text file)
 
-Can also be used to rename.
+Compares contents of two files line by line, and prints the lines that do not match.
 
-- `mv oldname.ext newname.ext`
+`diff file1.ext file2.ext`
 
-## `mkdir`
+## Navigating
+
+### `cd`
+
+Change directory.
+
+Useful shortcuts:
+
+- `cd` go to home folder
+- `cd-` go to previous directory
+
+## Creating
+
+### `mkdir` (New directory)
 
 Make a new directory.
 
@@ -63,11 +117,39 @@ If you want to make more levels, use `-p`, and it will make the directory if it 
 
 - `mkdir -p DirectoryName/Parent1/Parent2/NewDirectory`
 
-## `rmdir`
+### `touch` (New file)
+
+Makes new empty **file**.
+
+### `echo` (Write data to file)
+
+Move data to a file. `echo Hello, my name is Vong >> name.txt`. Writes "Hello my name is Vong" to name.txt.
+
+## Moving Files
+
+### `cp`
+
+Copy files from current directory to different directory.
+
+- `cp scenery.jpg /home/username/Pictures` would make a copy of `scenery.jpg` from your directory in the Pictures directory
+
+### `mv` (Move and rename files)
+
+Move files.
+
+- `mv file.txt /home/username/Documents`
+
+Can also be used to rename.
+
+- `mv oldname.ext newname.ext`
+
+## Deleting
+
+### `rmdir` (Empty directories only)
 
 Delete only **empty** directories.
 
-## `rm`
+### `rm` (Files and directories)
 
 - `rm -d dirname` - Remove empty directories
 - `rm -r dirname` - Delete directories and everything inside it.
@@ -75,80 +157,60 @@ Delete only **empty** directories.
 - `rm *.png` - Use regex to delete files
 - `rm -v filename` - Get info on what was removed. Will output _removed 'filename_.
 
-## `touch`
+## Searching
 
-Makes new empty **file**.
-
-## `locate`
+### `locate` (Files only)
 
 Uses a database to search for **files**.
 
 - `locate word1*word2` will search for files containing words 1 and 2.
 - `-i` makes search case insensitive.
 
-## `find`
+### `find` (Files or directories inside specific directories)
 
 Searches for **files** and **directories**. However, you can use `find` to locate files within a given directory.
 
 - `find . -name notes.txt`
 
-## `grep`
+### `grep` (Search text file)
 
-Searches through text in a given file
+Global regex print. Searches through text in a given file
 
 - `grep blue notepad.txt` will search for "blue" in the "notepad.txt" file.
 
-## `sudo`
+## Permissions
+
+### `sudo`
 
 Short for **SuperUser Do**. 😮 Gives admin rights and stuff.
 
-## `df`
+### `chmod` (Change permissions)
 
-Show system disk space usage in percentage and KBs.
+Change mode. Change read, write, and execute permission of files and directories.
 
-`df -m` to see in MBs.
-
-## `du`
-
-Show how much space the file or directory takes.
-
-`du -h` to show in normal size format.
-
-## `head`
-
-Shows the first 10 lines of a text file.
-
-`head -n 5 filename` to show 5 lines.
-
-## `tail`
-
-Shows last lines of a text file.
-
-## `diff`
-
-Compares contents of two files line by line, and prints the lines that do not match.
-
-`diff file1.ext file2.ext`
-
-## `tar`
-
-Archive multiple files into a **tarball** - Linux file format that is similar to zip format with option compression.
-
-## `chmod`
-
-Change read, write, and execute permission of files and directories.
-
-## `chown`
+### `chown` (Change owner)
 
 Changes ownership of a file.
 
 `chown user2 file.ext` gives ownership to user2.
 
-## `jobs`
+## Archiving
+
+### `tar` (Optional compress)
+
+Archive multiple files into a **tarball** - Linux file format that is similar to zip format with option compression.
+
+### `zip` and `unzip`
+
+Compress files to zip archive and use unzip to unzip.
+
+## Processes
+
+### `jobs`
 
 Display all current jobs and their statuses. A job is a process that is started by the shell.
 
-## `kill`
+### `kill`
 
 Manually terminate a program. There are **64** signals to tell a program to terminate. Need to provide the **process identification number** of the program.
 
@@ -157,10 +219,60 @@ Manually terminate a program. There are **64** signals to tell a program to term
 
 `kill [signal option] PID`
 
-## `ping`
+### `top` (Task Manager)
+
+Display a list of running programs and how much CPU each program uses.
+
+## Networking
+
+### `ping`
+
+`ping google.com` to get pings!
+
+### `wget` (Download - webget)
+
+Download files.
+
+`wget <downloadlink>`
+
+### `hostname`
+
+Displays computer's network name. Adding `-i` will display IP address
+
+## System
+
+### `uname`
+
+Short for Unix Name, will print detailed information about the Linux system, like machine name, operating system, kernel, etc.
+
+### `history`
+
+List a history of all commands that have been run.
+
+### `man` (Manual)
+
+Manual! `man tail` will show manual for the `tail` command
+
+### `df` (Show how much space available)
+
+Disk free. Show system disk space usage in percentage and KBs.
+
+`df -h` to see human readable.
+
+### `du` (disk usage for directories)
+
+Disk usage?. Show how much space the file or directory takes.
+
+`du -h` to show in normal size format.
+
+### `useradd` and `userdel`
+
+`useradd` creates new user, `passwd` adds a password to the account.
+`useradd John` then `passwd 123456`.
+
+`userdel John` deletes the account.
 
 # Questions
 
 1. I read that `locate` uses a database to search through so it's fast. Have to `updatedb`. Does it make `locate` less reliable? Do you use this command often?
-2. `tar` still unclear.
-3. `chmod` too
+2. `tar` still unclear. How good is compression? Why would you want to archive but not compress?
