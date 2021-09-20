@@ -1,4 +1,5 @@
 # 35 Useful Linux Commands
+[[Linux Directories]]
 
 https://www.hostinger.com/tutorials/linux-commands
 

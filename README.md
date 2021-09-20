@@ -1,6 +1,3 @@
 # notes
 
-A repository of things I've nifty things I've learnt along the way.
-
-### [Typescript/Javascript](https://github.com/vongb/notes/blob/main/TypeScript.md)
-### [React Testing](https://github.com/vongb/notes/blob/main/Testing%20React.md)
+A notes repository of things I've learned or currently learning. Using [Obsidian](https://obsidian.md/) to manage this knowledge graph.
