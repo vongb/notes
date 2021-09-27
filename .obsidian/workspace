@@ -7,11 +7,8 @@
         "id": "d6716db2801aeb86",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "source"
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -68,8 +65,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
-                "collapseAll": false,
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -78,8 +74,17 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "b4b471ae82173748",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -88,12 +93,12 @@
   },
   "active": "d6716db2801aeb86",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Linux/Linux Directories.md",
+    "Linux/Linux Commands.md",
     "README.md",
     "Terraform.md.md",
     "Testing React.md",
-    "Linux/Linux Directories.md",
-    "Linux/Linux Commands.md",
-    "Untitled.md",
     "Linux Commands.md",
     "Linux Directories.md",
     "TypeScript.md"
