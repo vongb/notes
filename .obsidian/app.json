@@ -1,5 +1,7 @@
 {
   "showLineNumber": true,
   "foldHeading": true,
-  "foldIndent": true
+  "foldIndent": true,
+  "attachmentFolderPath": "Images",
+  "alwaysUpdateLinks": true
 }

@@ -4,12 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "d6716db2801aeb86",
+        "id": "b1a7cf1d51512620",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
-        }
+          "type": "markdown",
+          "state": {
+            "file": "Linux/Linux.md",
+            "mode": "source"
+          }
+        },
+        "group": "684be9be04e013c8"
+      },
+      {
+        "id": "0b11634ccef1b69c",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Linux/Linux.md",
+            "mode": "preview"
+          }
+        },
+        "group": "684be9be04e013c8"
       }
     ],
     "direction": "vertical"
@@ -65,6 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linux/Linux.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linux/Linux.md"
+              }
             }
           }
         ],
@@ -91,16 +110,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "d6716db2801aeb86",
+  "active": "b1a7cf1d51512620",
   "lastOpenFiles": [
+    "Linux/Linux.md",
+    "Bash Scripting/Bash.md",
+    "Linux/Todo.md",
     "Untitled.md",
-    "Linux/Linux Directories.md",
-    "Linux/Linux Commands.md",
-    "README.md",
-    "Terraform.md.md",
-    "Testing React.md",
-    "Linux Commands.md",
-    "Linux Directories.md",
-    "TypeScript.md"
+    "Bash Scripting/Pattern Matching.md",
+    "Bash Scripting/Control Flows.md",
+    "Bash Scripting/Generating Numbers.md",
+    "Bash Scripting/Variables.md",
+    "Bash Scripting/Math Operations.md",
+    "Bash Scripting/Loops.md"
   ]
 }
