@@ -1,5 +1,6 @@
-# 35 Useful Linux Commands
-[[Linux Directories]]
+# 35 Useful [[#Linux]] Commands
+
+When a command is executed, the [[Linux#What is the Shell|shell]] interpreter checks for an `alias` under that name before it looks in the [[Linux Directories#bin - Essential User Binaries|/bin]] directory.
 
 https://www.hostinger.com/tutorials/linux-commands
 
@@ -77,6 +78,17 @@ Makes new empty **file**.
 ### `echo` (Write data to file)
 
 Move data to a file. `echo Hello, my name is Vong >> name.txt`. Writes "Hello my name is Vong" to name.txt.
+
+```bash
+
+# displays variable name
+echo sys
+
+# displays variable value
+echo $sys
+
+
+```
 
 ## Moving Files
 
@@ -225,7 +237,14 @@ Disk usage?. Show how much space the file or directory takes.
 
 `userdel John` deletes the account.
 
-# Questions
+### `export`
+Each shell session has access to a list of variables. Using `export` will list them and variables can be created/modified with: `export variableName[=value]`.
 
-1. I read that `locate` uses a database to search through so it's fast. Have to `updatedb`. Does it make `locate` less reliable? Do you use this command often?
-2. `tar` still unclear. How good is compression? Why would you want to archive but not compress?
+Exporting functions can also be done:
+```bash
+function hello {
+	echo hello, world
+}
+
+export -f hello`
+```
